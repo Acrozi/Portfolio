@@ -1,0 +1,123 @@
+@media screen and (max-width: 1400px) {
+    #profile {
+      height: 83vh;
+      margin-bottom: 6rem;
+    }
+    .about-containers {
+      flex-wrap: wrap;
+    }
+  }
+  
+  @media screen and (max-width: 1200px) {
+    #desktop-nav {
+      display: none;
+    }
+    #hamburger-nav {
+      display: flex;
+    }
+    .menu-links{z-index:1000000; font-weight:bold; font-size:0.8em; width:100%; background:#f7f7f7;  position:absolute; text-align:center; font-size:12px;}
+    .menu-links ul {margin: 0; padding: 0; list-style-type: none; list-style-image: none;}
+    .menu-links li:hover{display: block; background:#ffffff; padding:15px 0 15px 0; border-bottom:#dddddd 1px solid;}
+    .menu-links ul li a { text-decoration:none;  margin: 0px; color:#666;}
+    .menu-links ul li a:hover {  color: #666; text-decoration:none;}
+    .menu-links a:hover{text-decoration:none; color:#666;}
+
+    #experience,
+    .experience-details-container {
+      margin-top: 2rem;
+    }
+    #profile,
+    .section-container {
+      display: block;
+      transition: margin-top 0.5s ease;
+    }
+    .arrow {
+      display: none;
+    }
+    section,
+    .section-container {
+      height: fit-content;
+    }
+    section {
+      margin: 0 5%;
+    }
+    .section__pic-container {
+      width: 275px;
+      height: 275px;
+      margin: 0 auto 2rem;
+    }
+    .about-containers {
+      margin-top: 0;
+    }
+  }
+  
+  @media screen and (max-width: 600px) {
+    #contact,
+    footer {
+      height: 40vh;
+    }
+    #profile {
+      height: 83vh;
+      margin-bottom: 0;
+    }
+    article {
+      font-size: 1rem;
+    }
+    footer nav {
+      height: fit-content;
+      margin-bottom: 2rem;
+    }
+    .about-containers,
+    .contact-info-upper-container,
+    .btn-container {
+      flex-wrap: wrap;
+    }
+    .contact-info-container {
+      margin: 0;
+    }
+    .contact-info-container p,
+    .nav-links li a {
+      font-size: 1rem;
+    }
+    .experience-sub-title {
+      font-size: 1.25rem;
+    }
+    .logo {
+      font-size: 1.5rem;
+    }
+    .nav-links {
+      flex-direction: column;
+      gap: 0.5rem;
+      text-align: center;
+    }
+    .section__pic-container {
+      width: auto;
+      height: 46vw;
+      justify-content: center;
+    }
+    .section__text__p2 {
+      font-size: 1.25rem;
+    }
+    .title {
+      font-size: 2rem;
+    }
+    .text-container {
+      text-align: justify;
+    }
+    #content-container {
+      transition: margin-top 0.2s ease; /* Add a smooth transition effect */
+    }
+    .menu-open #content-container {
+      margin-top: 200px; /* Adjust the value based on your design */
+    } 
+    .menu-open #profile {
+      margin-top: 50px; /* Adjust the value based on your design */
+   }
+
+   .about-containers,
+.about-details-container {
+  display: flex;
+  width: 100%;
+  text-align: center;
+}
+  }
