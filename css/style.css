@@ -92,7 +92,7 @@ a:hover {
 
 
 .hamburger-menu {
-  display: inline-block;
+    cursor: pointer;
 }
 
 .hamburger-icon {
@@ -102,6 +102,7 @@ a:hover {
   height: 24px;
   width: 30px;
   cursor: pointer;
+  transition: all 0.3s ease;
 }
 
 .hamburger-icon span {
@@ -131,6 +132,8 @@ a:hover {
   text-decoration: none;
   transition: all 0.3 ease-in-out;
 }
+
+
 
 .menu-links li {
   list-style: none;
@@ -163,6 +166,7 @@ a:hover {
 .hamburger-icon span {
     display: block;
     height: 3px;
+    width: 100%;
     background: #333;
     transition: all 0.3s ease;
 }

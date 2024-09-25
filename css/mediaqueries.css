@@ -15,7 +15,7 @@
     #hamburger-nav {
         display: flex;
     }
-    
+
     .menu-links {
         z-index: 1000000;
         font-weight: bold;
@@ -31,7 +31,7 @@
         display: block; /* Visar menyn när den har klassen open */
     }
 
-    
+
     .menu-links ul {
         margin: 0;
         padding: 0;
