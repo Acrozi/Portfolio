@@ -10,9 +10,17 @@
 
 body {
   font-family: "Poppins", sans-serif;
-  background-color: #f7f7f7;
   margin: 0;
+  height: 100vh;
+  background: linear-gradient(to right, #ff7e6d, #6fb3ff); /* Brighter peach and pigeon blue gradient */
+  transition: background 0.3s ease; /* Smooth transition for background changes */
 }
+
+body:hover {
+  cursor: pointer;
+}
+
+
 
 html {
   scroll-behavior: smooth;
@@ -81,6 +89,8 @@ a:hover {
   display: none;
 }
 
+
+
 .hamburger-menu {
   display: inline-block;
 }
@@ -101,11 +111,12 @@ a:hover {
   transition: all 0.3 ease-in-out;
 }
 
+
+
 .menu-links {
   position: absolute;
   top: 100%;
   right: 0;
-  background-color: white;
   width: fit-content;
   max-height: 0;
   overflow: hidden;
@@ -117,7 +128,6 @@ a:hover {
   padding: 10px;
   text-align: center;
   font-size: 1.5rem;
-  color: black;
   text-decoration: none;
   transition: all 0.3 ease-in-out;
 }
@@ -150,8 +160,11 @@ a:hover {
   opacity: 1;
 }
 
-.hamburger-icon span:first-child {
-  transform: none;
+.hamburger-icon span {
+    display: block;
+    height: 3px;
+    background: #333;
+    transition: all 0.3s ease;
 }
 
 /* SECTIONS */
@@ -179,6 +192,15 @@ section {
   border-radius: 25%;
   gap: 5rem;
   height: 80vh;
+  transition: margin-top 0.5s ease;
+}
+
+.menu-open #content-container {
+  margin-top: 200px;
+}
+
+.menu-open #profile {
+  margin-top: 50px; /* Adjust the value based on your design */
 }
 
 .main-picture {
@@ -200,14 +222,14 @@ section {
   width: 400px; */
 /*   border-radius: 50%; */
   margin: auto 0;
-  
+
 }
 
 .section__text {
   align-self: center;
   text-align: center;
   position: relative;
-  left: 100%; 
+  left: 100%;
   animation: slideInAnimation 1s forwards;
 }
 
@@ -222,20 +244,22 @@ section {
 .section__text__p1 {
   text-align: center;
   position: relative;
-  left: 100%; 
+  left: 100%;
   animation: slideInAnimation 1s forwards;
+  color: white;
 }
 
 .section__text__p2 {
   font-size: 1.75rem;
   margin-bottom: 1rem;
+  color: white;
 }
 
 .title {
   font-size: 3rem;
   text-align: center;
   position: relative;
-  left: 100%; 
+  left: 100%;
   animation: slideInAnimation 1s forwards;
 }
 
@@ -255,6 +279,22 @@ section {
   height: 2rem;
   width: 48px;
   height: 48px;
+  padding-right: 2px;
+}
+
+.icon-big {
+  cursor: pointer;
+  height: 2rem;
+  width: 150px;
+  height: 150px;
+  padding-right: 2px;
+}
+
+.icon-veralex {
+  cursor: pointer;
+  margin-top: 50px;
+  width: 260px;
+  height: 69px;
   padding-right: 2px;
 }
 
@@ -345,12 +385,15 @@ section {
   padding: 1.5rem;
   flex: 1;
   align-items: center;
-  background: white;
+  /*background: linear-gradient(to right, #f7b2b7, #a0c1e7); Ursprunglig gradient */
   border-radius: 2rem;
   border: rgb(53, 53, 53) 0.1rem solid;
   border-color: rgb(163, 163, 163);
   text-align: center;
+  transition: background 0.3s ease; /* Mjuk övergång */
 }
+
+
 
 .section-container {
   height: 40%;
@@ -412,7 +455,7 @@ article .icon {
 
 .color-container {
   border-color: rgb(163, 163, 163);
-  background: rgb(250, 250, 250);
+  /* background: rgb(250, 250, 250); */
 }
 
 .project-img {
@@ -483,38 +526,240 @@ footer p {
   transition: margin-top 0.5s ease; /* Add a smooth transition effect */
 }
 
-/* Style for the arrow container */
-.scroll-arrow-container {
-  position: fixed;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  text-align: center;
-  margin-bottom: 20px; /* Adjust the margin as needed */
+
+
+
+.cd-container {
+  width: 100%;
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 10%;
+  border-radius: 2px;
+}
+.cd-container::after {
+  content: '';
+  display: table;
+  clear: both;
 }
 
-/* Style for the arrow */
-.scroll-arrow {
-  font-size: 24px; /* Adjust the font size as needed */
-  text-decoration: none;
-  color: #333; /* Set the arrow color */
+/* --------------------------------
+
+Main components
+
+-------------------------------- */
+
+
+#cd-timeline {
+  position: relative;
+  padding: 2em 0;
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+#cd-timeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 25px;
+  height: 100%;
+  width: 4px;
+  background: #7E57C2;
+}
+@media only screen and (min-width: 1170px) {
+  #cd-timeline {
+    margin-top: 3em;
+    margin-bottom: 3em;
+  }
+  #cd-timeline::before {
+    left: 50%;
+    margin-left: -2px;
+  }
 }
 
-.arrow-show {
-  opacity: 1;
-  transition: opacity 0.5s ease; /* Add a smooth transition effect */
+.cd-timeline-block {
+  position: relative;
+  margin: 2em 0;
+}
+.cd-timeline-block:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.cd-timeline-block:first-child {
+  margin-top: 0;
+}
+.cd-timeline-block:last-child {
+  margin-bottom: 0;
+}
+@media only screen and (min-width: 1170px) {
+  .cd-timeline-block {
+    margin: 4em 0;
+  }
+  .cd-timeline-block:first-child {
+    margin-top: 0;
+  }
+  .cd-timeline-block:last-child {
+    margin-bottom: 0;
+  }
 }
 
-.scroll-arrow {
-  opacity: 0; /* Start with the arrow hidden */
-  /* ... your existing arrow styles ... */
+.cd-timeline-img {
+  position: absolute;
+  top: 8px;
+  left: 12px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  box-shadow: 0 0 0 4px #7E57C2, inset 0 2px 0 rgba(0, 0, 0, 0.08), 0 3px 0 4px rgba(0, 0, 0, 0.05);
+}
+.cd-timeline-img {
+  background: #673AB7;
+}
+@media only screen and (min-width: 1170px) {
+  .cd-timeline-img {
+    width: 30px;
+    height: 30px;
+    left: 50%;
+    margin-left: -15px;
+    margin-top: 15px;
+    /* Force Hardware Acceleration in WebKit */
+    -webkit-transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+  }
 }
 
-.scroll-arrow {
-  opacity: 1;
-  transition: opacity 0.5s ease;
+.cd-timeline-content {
+  position: relative;
+  margin-left: 60px;
+  margin-right: 30px;
+  background: #000000;
+  border-radius: 2px;
+  padding: 1em;
+  .timeline-content-info {
+    background: #2B343A;
+    padding: 5px 10px;
+    color: rgba(255,255,255,0.7);
+    font-size: 12px;
+    box-shadow:  inset 0 2px 0 rgba(0, 0, 0, 0.08);
+    border-radius: 2px;
+    i {
+      margin-right: 5px;
+    }
+    .timeline-content-info-title, .timeline-content-info-date {
+      width: calc(50% - 2px);
+      display: inline-block;
+    }
+    @media (max-width: 500px) {
+      .timeline-content-info-title, .timeline-content-info-date {
+        display: block;
+        width:100%;
+      }
+    }
+  }
+  .content-skills {
+    font-size: 12px;
+    padding:0;
+    margin-bottom: 0;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    li {
+      background: #40484D;
+      border-radius: 2px;
+      display: inline-block;
+      padding: 2px 10px;
+      color: rgba(255,255,255,0.7);
+      margin: 3px 2px;
+      text-align: center;
+      flex-grow: 1;
+    }
+  }
+}
+.cd-timeline-content:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.cd-timeline-content h2 {
+  color: rgba(255,255,255,.9);
+  margin-top:0;
+  margin-bottom: 5px;
+}
+.cd-timeline-content p, .cd-timeline-content .cd-date {
+  color: rgba(255,255,255,.7);
+  font-size: 13px;
+  font-size: 0.8125rem;
+}
+.cd-timeline-content .cd-date {
+  display: inline-block;
+}
+.cd-timeline-content p {
+  margin: 1em 0;
+  line-height: 1.6;
 }
 
-.arrow-hidden .scroll-arrow {
-  display: none;
+.cd-timeline-content::before {
+  content: '';
+  position: absolute;
+  top: 16px;
+  right: 100%;
+  height: 0;
+  width: 0;
+  border: 7px solid transparent;
+  border-right: 7px solid #333C42;
+}
+
+@media only screen and (min-width: 768px) {
+  .cd-timeline-content h2 {
+    font-size: 20px;
+    font-size: 1.25rem;
+  }
+  .cd-timeline-content p {
+    font-size: 16px;
+    font-size: 1rem;
+  }
+  .cd-timeline-content .cd-read-more, .cd-timeline-content .cd-date {
+    font-size: 14px;
+    font-size: 0.875rem;
+  }
+}
+@media only screen and (min-width: 1170px) {
+  .cd-timeline-content {
+    color: white;
+    margin-left: 0;
+    padding: 1.6em;
+    width: 36%;
+    margin: 0 5%
+  }
+  .cd-timeline-content::before {
+    top: 24px;
+    left: 100%;
+    border-color: transparent;
+    border-left-color: #333C42;
+  }
+  .cd-timeline-content .cd-date {
+    position: absolute;
+    width: 100%;
+    left: 132%;
+    top: 25px;
+    font-size: 16px;
+    font-size: 1rem;
+  }
+  .cd-timeline-block:nth-child(even) .cd-timeline-content {
+    float: right;
+  }
+  .cd-timeline-block:nth-child(even) .cd-timeline-content::before {
+    top: 24px;
+    left: auto;
+    right: 100%;
+    border-color: transparent;
+    border-right-color: #333C42;
+  }
+  .cd-timeline-block:nth-child(even) .cd-timeline-content .cd-read-more {
+    float: right;
+  }
+  .cd-timeline-block:nth-child(even) .cd-timeline-content .cd-date {
+    left: auto;
+    right: 132%;
+    text-align: right;
+  }
 }
