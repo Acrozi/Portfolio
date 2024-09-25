@@ -29,4 +29,4 @@ jobs:
       # Steg 4: Kopiera filerna till din Simply Hosting-server via SSH
       - name: Deploy to Hosting
         run: |
-          rsync -avz --delete ./ andreymsh.se@${{ secrets.SERVER_IP }}:/www/andreymsh.se/public_html
+          rsync -avz --delete ./ andreymsh.se@${{ secrets.SERVER_IP }}:/var/www/andreymsh.se/public_html
