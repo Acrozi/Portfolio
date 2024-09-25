@@ -14,28 +14,26 @@
 <body>
   <nav id="desktop-nav">
     <div class="logo">Andrey Mashchenko</div>
-    <div>
-      <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </div>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
   </nav>
 
   <nav id="hamburger-nav">
     <div class="logo">Andrey Mashchenko</div>
-    <div class="hamburger-menu">
-      <div class="hamburger-icon" onclick="toggleMenu()">
+    <div class="hamburger-menu" onclick="toggleMenu()">
+      <div class="hamburger-icon">
         <span></span>
         <span></span>
         <span></span>
       </div>
-      <div class="menu-links">
+      <ul class="menu-links">
         <li><a href="#about" onclick="toggleMenu()">About</a></li>
         <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
         <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
-      </div>
+      </ul>
     </div>
   </nav>
 
@@ -66,8 +64,7 @@
         <div class="about-details-container">
           <div class="about-containers">
             <div class="details-container">
-              <p>Hej! Mitt namn är Andrey och jag studerar DevSecOps programmet på KYH sedan hösten 2023. Teknik, IT och problemlösning har alltid varit mina största intressen. Jag söker nu en LIA plats inför hösten 2024, Nov-April, gärna inom samma område som programmet. Jag söker främst praktik i Malmö, Lund, Helsingborg eller andra orter i närheten samt i Halmstad. Lite kort om mig, jag är mycket driven och jag drar mig inte för utmaningar. Det kan hända att jag sitter med problem in i natten för att hitta lösningen. Jag har erfarenhet inom C, C#, Docker, SQL, GitHub, GitHub actions, AWS, Linux, Ansible, Vagrant, Virtualisering och CI/CD-pipelines. Jag har även jobbat en del med Frontend, Wordpress, HTML, PHP, JS på fritiden. Jag är även intresserad av IoT och har genomfört några små projekt. Jag uppskattar all kontakt och ser mycket fram emot att praktisera!</p>
-            </div>
+            <p>Hej! Mitt namn är Andrey och jag studerar DevSecOps programmet på KYH sedan hösten 2023. Teknik, IT och problemlösning har alltid varit mina största intressen. Jag söker nu en LIA plats inför hösten 2024, Nov-April, gärna inom samma område som programmet. Jag söker främst praktik i Malmö, Lund, Helsingborg eller andra orter i närheten samt i Halmstad. Jag är mycket driven och jag drar mig inte för utmaningar. Jag har erfarenhet inom C, C#, Docker, SQL, GitHub, GitHub actions, AWS, Linux, Ansible, Vagrant, Virtualisering och CI/CD-pipelines. Jag har även jobbat en del med Frontend, Wordpress, HTML, PHP, JS på fritiden. Jag är även intresserad av IoT och har genomfört några små projekt. Jag uppskattar all kontakt och ser mycket fram emot att praktisera!</p>
           </div>
         </div>
       </div>
@@ -81,64 +78,29 @@
           <div class="details-container">
             <h2 class="experience-sub-title">Frontend Development</h2>
             <div class="article-container">
-              <article>
-                <img src="./assets/Wordpress.svg" alt="Experience icon" class="icon" />
-              </article>
-              <article>
-                <img src="./assets/HTML.svg" alt="Experience icon" class="icon" />
-              </article>
-              <article>
-                <img src="./assets/PHP-Dark.svg" alt="Experience icon" class="icon" />
-              </article>
-              <article>
-                <img src="./assets/CSS.svg" alt="Experience icon" class="icon" />
-              </article>
-              <article>
-                <img src="./assets/JavaScript.svg" alt="Experience icon" class="icon" />
-              </article>
-              <article>
-                <img src="./assets/Photoshop.svg" alt="Experience icon" class="icon" />
-              </article>
-              <article>
-                <img src="./assets/Learn.png" alt="Experience icon" class="icon" />
-              </article>
-              <article>
-                <img src="./assets/Learn.png" alt="Experience icon" class="icon" />
-              </article>
+              <article><img src="./assets/Wordpress.svg" alt="Experience icon" class="icon" /></article>
+              <article><img src="./assets/HTML.svg" alt="Experience icon" class="icon" /></article>
+              <article><img src="./assets/PHP-Dark.svg" alt="Experience icon" class="icon" /></article>
+              <article><img src="./assets/CSS.svg" alt="Experience icon" class="icon" /></article>
+              <article><img src="./assets/JavaScript.svg" alt="Experience icon" class="icon" /></article>
+              <article><img src="./assets/Photoshop.svg" alt="Experience icon" class="icon" /></article>
             </div>
           </div>
           <div class="details-container">
             <h2 class="experience-sub-title">Backend Development</h2>
             <div class="article-container">
-              <article>
-                <img src="./assets/CS.svg" alt="Experience icon" class="icon" />
-              </article>
-              <article>
-                <img src="./assets/Docker.svg" alt="Experience icon" class="icon" />
-              </article>
-              <article>
-                <img src="./assets/MySQL-Dark.svg" alt="Experience icon" class="icon" />
-              </article>
-              <article>
-                <img src="./assets/DotNet.svg" alt="Experience icon" class="icon" />
-              </article>
-              <article>
-                <img src="./assets/Github-Dark.svg" alt="Experience icon" class="icon" />
-              </article>
-              <article>
-                <img src="./assets/GithubActions-Dark.svg" alt="Experience icon" class="icon" />
-              </article>
-              <article>
-                <img src="./assets/Java-Dark.svg" alt="Experience icon" class="icon" />
-              </article>
-              <article>
-                <img src="./assets/AWS-Dark.svg" alt="Experience icon" class="icon" />
-              </article>
+              <article><img src="./assets/CS.svg" alt="Experience icon" class="icon" /></article>
+              <article><img src="./assets/Docker.svg" alt="Experience icon" class="icon" /></article>
+              <article><img src="./assets/MySQL-Dark.svg" alt="Experience icon" class="icon" /></article>
+              <article><img src="./assets/DotNet.svg" alt="Experience icon" class="icon" /></article>
+              <article><img src="./assets/Github-Dark.svg" alt="Experience icon" class="icon" /></article>
+              <article><img src="./assets/GithubActions-Dark.svg" alt="Experience icon" class="icon" /></article>
+              <article><img src="./assets/Java-Dark.svg" alt="Experience icon" class="icon" /></article>
+              <article><img src="./assets/AWS-Dark.svg" alt="Experience icon" class="icon" /></article>
             </div>
           </div>
         </div>
       </div>
-      <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#projects'" />
     </section>
 
     <section id="projects">
@@ -150,28 +112,20 @@
             <div class="article-container">
               <img src="./assets/veralex.png" alt="Project 1" class="icon-veralex" />
             </div>
+            <p>Jag designade och skapade en modern och användarvänlig webbsida för en lokal skönhetssalong med målet att förbättra salongens online-närvaro. Det var viktigt att göra det enklare för kunder att boka behandlingar och ge dem en plattform för att utforska salongens tjänster.</p>
             <br>
-            <p>Jag designade och skapade en modern och användarvänlig webbsida för en lokal skönhetssalong med målet att förbättra salongens online-närvaro. Det var viktigt att göra det enklare för kunder att boka behandlingar och ge dem en plattform för att utforska salongens tjänster. Genom att skapa en attraktiv och informativ webbsida ville jag säkerställa att den speglar salongens varumärke och atmosfär.</p>
             <div class="btn-container">
-              <button class="btn btn-color-2 project-btn" onclick="location.href='https://veralexbeauty.se/'">Demo</button>
+              <button class="btn btn-color-2 project-btn" onclick="window.open('https://veralexbeauty.se/')">Demo</button>
             </div>
           </div>
           <div class="details-container color-container">
             <div class="article-container">
               <img src="./assets/adams.png" alt="Project 2" class="icon-big" />
             </div>
-            <p>Jag designade och skapade en informativ och användarvänlig webbsida för en tjänsteleverantör som erbjuder ett brett utbud av bostadsrelaterade tjänster. Målet var att förbättra företagets online-närvaro och göra det enklare för kunder att förstå och boka de tjänster som erbjuds.</p>
+            <p>Jag designade och skapade en informativ och användarvänlig webbsida för en tjänsteleverantör som erbjuder ett brett utbud av bostadsrelaterade tjänster.</p>
+            <br>
             <div class="btn-container">
-              <button class="btn btn-color-2 project-btn" onclick="location.href='https://adamsservice.se/'">Demo</button>
-            </div>
-          </div>
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img src="./assets/haj.png" alt="Project 3" class="icon-big" />
-            </div>
-            <p>Jag utvecklade en mobilapp för hajklubben som gör det möjligt för medlemmar att boka träningstider, hantera sina konton och få information om klubbens aktiviteter. Målet var att förbättra användarupplevelsen och underlätta kommunikationen mellan medlemmar och klubben.</p>
-            <div class="btn-container">
-              <button class="btn btn-color-2 project-btn" onclick="location.href='https://play.google.com/store/apps/details?id=com.hajklubben'">Demo</button>
+              <button class="btn btn-color-2 project-btn" onclick="window.open('https://adamshemrent.se/')">Demo</button>
             </div>
           </div>
         </div>
@@ -179,39 +133,34 @@
     </section>
 
     <section id="contact">
-      <p class="section__text__p1">Get In Touch</p>
+      <p class="section__text__p1">Get in Touch</p>
       <h1 class="title">Contact Me</h1>
-      <div class="contact-details-container">
-        <div class="about-containers">
-          <div class="details-container">
-            <div class="contact-detail">
-              <img src="./assets/Email.svg" alt="Email icon" class="contact-icon" />
-              <span>andrey.mashchenko@gmail.com</span>
-            </div>
-            <div class="contact-detail">
-              <img src="./assets/Phone.svg" alt="Phone icon" class="contact-icon" />
-              <span>070-321 73 37</span>
-            </div>
-            <div class="contact-detail">
-              <img src="./assets/Location.svg" alt="Location icon" class="contact-icon" />
-              <span>Helsingborg, Sweden</span>
-            </div>
-            <div class="contact-detail">
-              <img src="./assets/LinkedIn.svg" alt="LinkedIn icon" class="contact-icon" />
-              <span><a href="https://www.linkedin.com/in/andrmsh/">LinkedIn</a></span>
-            </div>
-            <div class="contact-detail">
-              <img src="./assets/Github.svg" alt="GitHub icon" class="contact-icon" />
-              <span><a href="https://github.com/acrozi">GitHub</a></span>
-            </div>
-          </div>
+      <div class="contact-info-upper-container">
+        <div class="contact-info-container">
+          <img src="./assets/email.png" alt="Email icon" class="icon" />
+          <p><a href="mailto:mashenko.andr@gmail.com">mashenko.andr@gmail.com</a></p>
+        </div>
+        <div class="contact-info-container">
+          <img src="./assets/linkedin.png" alt="LinkedIn icon" class="icon" />
+          <p><a href="https://www.linkedin.com/in/andrmsh/">LinkedIn</a></p>
         </div>
       </div>
-      <div class="footer">© 2024 Andrey Mashchenko</div>
     </section>
   </div>
 
-  <script src="./js/index.js"></script>
+  <footer>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <p>&copy; 2024 Andrey Mashchenko. All rights reserved.</p>
+  </footer>
+
+  <script src="./js/scroll.js"></script>
+  <script src="./js/script.js"></script>
 </body>
 
 </html>
