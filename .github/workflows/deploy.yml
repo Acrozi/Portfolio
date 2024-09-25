@@ -20,7 +20,13 @@ jobs:
         with:
           ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
 
-      # Steg 3: Kopiera filerna till din Simply Hosting-server via SSH
-      - name: Deploy to Simply Hosting
+      # Steg 3: Lägg till servern till known_hosts
+      - name: Add server to known_hosts
+        run: |
+          mkdir -p ~/.ssh
+          ssh-keyscan -H linux190.unoeuro.com >> ~/.ssh/known_hosts
+
+      # Steg 4: Kopiera filerna till din Simply Hosting-server via SSH
+      - name: Deploy to Hosting
         run: |
           rsync -avz --delete ./ your-user@${{ secrets.SERVER_IP }}:/public_html
