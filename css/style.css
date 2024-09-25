@@ -164,11 +164,10 @@ a:hover {
 }
 
 .hamburger-icon span {
-    display: block;
-    height: 3px;
-    width: 100%;
-    background: #333;
-    transition: all 0.3s ease;
+  display: block;
+  height: 3px;
+  background: #333;
+  transition: all 0.3s ease;
 }
 
 /* SECTIONS */
@@ -392,7 +391,7 @@ section {
   /*background: linear-gradient(to right, #f7b2b7, #a0c1e7); Ursprunglig gradient */
   border-radius: 2rem;
   border: rgb(53, 53, 53) 0.1rem solid;
-  border-color: rgb(163, 163, 163);
+  border-color: rgb(194 194 194);
   text-align: center;
   transition: background 0.3s ease; /* Mjuk övergång */
 }
