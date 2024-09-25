@@ -1,0 +1,26 @@
+name: Deploy My Portfolio
+
+on:
+  push:
+    branches:
+      - main  # Den branch som ska trigga deployment
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Steg 1: Checka ut din kod
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      # Steg 2: Sätt upp SSH-nyckeln
+      - name: Setup SSH
+        uses: webfactory/ssh-agent@v0.5.4
+        with:
+          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+
+      # Steg 3: Kopiera filerna till din Simply Hosting-server via SSH
+      - name: Deploy to Simply Hosting
+        run: |
+          rsync -avz --delete ./ your-user@${{ secrets.SERVER_IP }}:/public_html
