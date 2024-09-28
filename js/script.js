@@ -3,9 +3,9 @@ document.addEventListener("DOMContentLoaded", function() {
     const menuLinks = document.querySelector('.menu-links');
     const contentContainer = document.getElementById('content-container');
     const profile = document.getElementById('profile');
+    const menuItems = document.querySelectorAll('.menu-links a');
 
-    hamburgerIcon.addEventListener('click', function() {
-        // Växla klasser för att öppna/stänga menyn och hamburgerikonen
+    function toggleMenu() {
         hamburgerIcon.classList.toggle('open');
         menuLinks.classList.toggle('open');
         contentContainer.classList.toggle('menu-open');
@@ -17,5 +17,15 @@ document.addEventListener("DOMContentLoaded", function() {
         } else {
             menuLinks.style.display = 'none'; // Dölja menyn
         }
+    }
+
+    hamburgerIcon.addEventListener('click', toggleMenu);
+
+    menuItems.forEach(item => {
+        item.addEventListener('click', function() {
+            if (menuLinks.classList.contains('open')) {
+                toggleMenu();
+            }
+        });
     });
 });
