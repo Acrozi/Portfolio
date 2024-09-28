@@ -134,6 +134,115 @@ a:hover {
 }
 
 
+#skills {
+  padding: 2rem 1rem; /* Mindre padding för små skärmar */
+  text-align: center;
+}
+
+.title {
+  font-size: 2rem; /* Justera titeln för mindre skärmar */
+  margin-bottom: 1.5rem;
+  color: #ffffff;
+}
+
+.details-container {
+  margin-bottom: 2rem;
+}
+
+.experience-sub-title {
+  font-size: 1.5rem; /* Justera storleken för rubriker */
+  color: #ffffff;
+  margin-bottom: 1rem;
+}
+
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.skill {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  border: 2px solid #ffffff;
+  border-radius: 10px;
+  padding: 0.8rem 1.5rem; /* Mindre padding för att få plats på små skärmar */
+  font-size: 1rem; /* Mindre textstorlek för bättre anpassning */
+  color: #ffffff;
+  transition: all 0.3s ease-in-out;
+  max-width: 100%; /* Begränsa bredden för att undvika problem på små skärmar */
+}
+
+.skill img {
+  width: 20px; /* Mindre ikoner för att passa på små skärmar */
+  height: 20px;
+}
+
+.skill:hover {
+  background: rgb(53, 53, 53);
+  color: #ffffff;
+  transform: translateY(-3px); /* Mindre animation för mobil */
+}
+
+/* Media Queries för Mobilanpassning */
+@media (max-width: 768px) {
+  .skills-container {
+    flex-direction: column; /* Gör att varje färdighet visas i en kolumn för små skärmar */
+    gap: 0.8rem;
+  }
+
+  .details-container {
+    margin-bottom: 1.5rem; /* Mindre marginaler för bättre passning */
+  }
+
+  .skill {
+    padding: 1rem; /* Lättare att klicka på */
+    font-size: 1rem; /* Anpassad textstorlek */
+  }
+
+  .experience-sub-title {
+    font-size: 1.3rem; /* Mindre rubriker på mobil */
+  }
+}
+
+
+
+/* #skills {
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.skills-title {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #333; /* Ändra färgen för titeln om du vill */
+}
+
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.skill {
+  border: 1px solid #333; /* Ändra färg om du vill */
+  padding: 0.8rem 1.5rem;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.skill:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+} */
+
 
 .menu-links li {
   list-style: none;
